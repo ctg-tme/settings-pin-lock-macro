@@ -117,7 +117,7 @@ xapi.Event.UserInterface.Extensions.Event.PageClosed.on(({ PageId }) => {
 xapi.Event.UserInterface.Extensions.Panel.Clicked.on(({ PanelId }) => {
   if (PanelId == 'settings_admin_visible' && settingsLocked) {
     pinPrompt()
-  } else {
+  } else if (PanelId == 'settings_admin_visible') {
     xapi.Command.UserInterface.Extensions.Panel.Open({ PanelId: 'settings_admin_hidden' });
   }
 
