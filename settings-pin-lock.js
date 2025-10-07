@@ -83,7 +83,7 @@ async function unlock(cause) {
   }, defaultTime * 60 * 1000);
   await xapi.Command.UserInterface.Message.Alert.Display({
     Title: 'Settings Menu Unlocked',
-    Text: `You have ${defaultTime} to complete your actions befire the system relocks itself`
+    Text: `You have ${defaultTime}minutes to complete your actions before the system re-locks itself`
   })
   await xapi.Command.UserInterface.Extensions.Panel.Close();
   console.log({ Message: 'Settings Unlocked', Cause: cause })
